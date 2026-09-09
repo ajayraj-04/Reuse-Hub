@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ReuseHub - Sell Your Product</title>
+
+    
+    <!-- Sell Page CSS -->
+    <link rel="stylesheet" href="sell.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header >
+    <nav class="navbar">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <i class="fa-solid fa-recycle"></i>
+                <h2>Reuse<span>Hub</span></h2>
+            </div>
+
+            <!-- NAVIGATION -->
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="products.html">Products</a>
+                </li>
+
+                <li>
+                    <a href="categories.html">Categories</a>
+                </li>
+
+                <li>
+                    <a href="About.html">About</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+                <li>
+                    <a href="sell.html">Sell</a>
+                </li>
+
+            </ul>
+
+            <!-- RIGHT NAV -->
+            <div class="nav-right">
+
+                <a href="cart.html" class="cart">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span id="cart-count">0</span>
+</a>
+
+                <a href="login.html" class="login-btn">
+                    Login
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= SELL SECTION ================= -->
+
+    <section class="sell-section">
+
+        <h1>
+            <i class="fa-solid fa-tag"></i>
+            Sell Your Product
+        </h1>
+
+        
+
+        <!-- ================= FORM ================= -->
+
+        <form id="sellForm">
+
+
+            <!-- Product Name -->
+
+            <div class="form-group">
+
+                <label for="productName">
+                    Product Name
+                </label>
+
+                <input
+                    type="text"
+                    id="productName"
+                    placeholder="Example: Sofa"
+                    required>
+
+            </div>
+
+
+            <!-- Category -->
+
+            <div class="form-group">
+
+                <label for="category">
+                    Category
+                </label>
+
+                <select id="category" required>
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option value="Furniture">
+                        Furniture
+                    </option>
+
+                    <option value="TV">
+                        TV
+                    </option>
+
+                    <option value="AC">
+                        AC
+                    </option>
+
+                    <option value="Refrigerator">
+                        Refrigerator
+                    </option>
+
+                    <option value="Washing Machine">
+                        Washing Machine
+                    </option>
+
+                    <option value="Laptop">
+                        Laptop
+                    </option>
+
+                    <option value="Mobile">
+                        Mobile
+                    </option>
+
+                    <option value="Chair">
+                        Chair
+                    </option>
+
+                    <option value="Bed">
+                        Bed
+                    </option>
+
+                    <option value="Electronics">
+                        Electronics
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Price -->
+
+            <div class="form-group">
+
+                <label for="price">
+                    Price (₹)
+                </label>
+
+                <input
+                    type="number"
+                    id="price"
+                    placeholder="Example: 5000"
+                    min="1"
+                    required>
+
+            </div>
+
+
+            <!-- Condition -->
+
+            <div class="form-group">
+
+                <label for="condition">
+                    Product Condition
+                </label>
+
+                <select id="condition" required>
+
+                    <option value="">
+                        Select Condition
+                    </option>
+
+                    <option value="Like New">
+                        Like New
+                    </option>
+
+                    <option value="Good">
+                        Good
+                    </option>
+
+                    <option value="Fair">
+                        Fair
+                    </option>
+
+                    <option value="Used">
+                        Used
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Description -->
+
+            <div class="form-group">
+
+                <label for="description">
+                    Product Description
+                </label>
+
+                <textarea
+                    id="description"
+                    placeholder="Describe your product..."
+                    required></textarea>
+
+            </div>
+
+
+            <!-- Product Image -->
+
+            <div class="form-group">
+
+                <label for="productImage">
+                    Product Image
+                </label>
+
+                <input
+                    type="file"
+                    id="productImage"
+                    accept="image/*"
+                    required>
+
+                <small>
+                    Upload a clear image of your product.
+                </small>
+
+            </div>
+
+
+            <!-- Seller Name -->
+
+            <div class="form-group">
+
+                <label for="sellerName">
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="sellerName"
+                    placeholder="Enter your name"
+                    required>
+
+            </div>
+
+
+            <!-- Phone -->
+
+            <div class="form-group">
+
+                <label for="phone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter phone number"
+                    maxlength="10"
+                    required>
+
+            </div>
+
+
+            <!-- Location -->
+
+            <div class="form-group">
+
+                <label for="location">
+                    Location
+                </label>
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Example: Chennai"
+                    required>
+
+            </div>
+
+
+            <!-- List Product Button -->
+
+            <button
+                type="submit"
+                id="listProductBtn">
+
+                <i class="fa-solid fa-upload"></i>
+
+                List Product
+
+            </button>
+
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 ReuseHub. Buy & Sell Used Products.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        document
+            .getElementById("sellForm")
+            .addEventListener("submit", async function (event) {
+
+                event.preventDefault();
+
+
+                const product = {
+
+                    productName:
+                        document.getElementById("productName").value,
+
+                    category:
+                        document.getElementById("category").value,
+
+                    price:
+                        document.getElementById("price").value,
+
+                    condition:
+                        document.getElementById("condition").value,
+
+                    description:
+                        document.getElementById("description").value,
+
+                    sellerName:
+                        document.getElementById("sellerName").value,
+
+                    phone:
+                        document.getElementById("phone").value,
+
+                    location:
+                        document.getElementById("location").value
+                };
+
+
+                try {
+
+                    const response = await fetch(
+                        "http://localhost:5000/api/products",
+                        {
+                            method: "POST",
+
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+
+                            body: JSON.stringify(product)
+                        }
+                    );
+
+
+                    const data = await response.json();
+
+
+                    if (response.ok) {
+
+                        alert(
+                            "Product Listed Successfully! 🎉"
+                        );
+
+                        document
+                            .getElementById("sellForm")
+                            .reset();
+
+                    } else {
+
+                        alert(
+                            "Error: " + data.message
+                        );
+
+                    }
+
+                }
+
+                catch (error) {
+
+                    console.error(error);
+
+                    alert(
+                        "Backend connection failed!"
+                    );
+
+                }
+
+            });
+
+    </script>
+
+</body>
+
+</html>

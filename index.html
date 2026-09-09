@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ReuseHub - Buy & Sell Used Products</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <nav class="navbar">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <i class="fa-solid fa-recycle"></i>
+                <h2>Reuse<span>Hub</span></h2>
+            </div>
+
+            <!-- NAVIGATION -->
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="products.html">Products</a>
+                </li>
+
+                <li>
+                    <a href="categories.html">Categories</a>
+                </li>
+
+                <li>
+                    <a href="About.html">About</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+                <li>
+                    <a href="sell.html">Sell</a>
+                </li>
+
+            </ul>
+
+            <!-- RIGHT NAV -->
+            <div class="nav-right">
+
+                <a href="cart.html" class="cart">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span id="cart-count">0</span>
+
+                </a>
+
+                <a href="login.html" class="login-btn">
+                    Login
+                </a>
+<div id="welcomeToast" class="welcome-toast"></div>
+<button id="logoutBtn" style="display:none;">
+    Logout
+</button>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <!-- LEFT SIDE -->
+        <div class="left">
+
+            <h1>
+                Buy • Sell •
+                <span>Reuse</span>
+                • Repeat
+            </h1>
+
+            <p>
+                Give your old products a new life.
+                <br>
+                Find great deals on used items around you.
+            </p>
+
+            <div class="hero-btn">
+
+                <button class="sell-btn" onclick="window.location.href='sell.html'">
+    <i class="fa-solid fa-tag"></i>
+    Sell Your Product
+</button>
+
+                <button class="explore-btn" onclick="window.location.href='products.html'">
+    <i class="fa-solid fa-bag-shopping"></i>
+    Explore Products
+</button>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="right">
+
+            <!-- SEARCH -->
+            <div class="search-box">
+
+                <input
+                    type="text" id="homeSearch" placeholder="Search products...">
+                
+
+                 <button type="button" onclick="homeSearchProducts()">Search 🔍</button>
+
+            </div>
+
+
+            <!-- CATEGORIES -->
+            <div class="categories">
+
+                <div class="cat">
+                    <i class="fa-solid fa-couch"></i>
+                    <p>Furniture</p>
+                </div>
+
+                <div class="cat">
+                    <i class="fa-solid fa-tv"></i>
+                    <p>Electronics</p>
+                </div>
+
+                <div class="cat">
+                    <i class="fa-solid fa-snowflake"></i>
+                    <p>Appliances</p>
+                </div>
+
+                <div class="cat">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <p>Mobiles</p>
+                </div>
+
+                <div class="cat">
+                    <i class="fa-solid fa-laptop"></i>
+                    <p>Laptops</p>
+                </div>
+
+                <div class="cat" id="moreBtn">
+    <i class="fa-solid fa-ellipsis"></i>
+    <p>More</p>
+</div>
+
+
+<div class="more-dropdown" id="moreDropdown">
+    <a href="#how-it-works">How ReuseHub Works</a>
+    <a href="#why-choose">Why Choose ReuseHub</a>
+    <a href="contact.html">Contact Us</a>
+</div>
+            </div> <!-- categories close -->
+
+
+        </div>
+
+    </section>
+
+<!-- FEATURED PRODUCTS -->
+    <section class="featured">
+        <h2>Featured Products</h2>
+        <p>Explore some of the latest products available on ReuseHub.</p>
+
+        <div class="featured-container">
+
+            <div class="product-card">
+                <div class="product-icon">
+                    <i class="fa-solid fa-couch"></i>
+                </div>
+                <h3>Furniture</h3>
+                <p>Quality used furniture at affordable prices.</p>
+                <button onclick="window.location.href='products.html'">
+                    View Products
+                </button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">
+                    <i class="fa-solid fa-tv"></i>
+                </div>
+                <h3>Electronics</h3>
+                <p>Find TVs and other electronics at great prices.</p>
+                <button onclick="window.location.href='products.html'">
+                    View Products
+                </button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">
+                    <i class="fa-solid fa-laptop"></i>
+                </div>
+                <h3>Laptops</h3>
+                <p>Pre-owned laptops ready for a new owner.</p>
+                <button onclick="window.location.href='products.html'">
+                    View Products
+                </button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                </div>
+                <h3>Mobiles</h3>
+                <p>Discover affordable second-hand mobiles.</p>
+                <button onclick="window.location.href='products.html'">
+                    View Products
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- WHY CHOOSE REUSEHUB -->
+    <section class="why-us">
+
+        <h2>Why Choose ReuseHub?</h2>
+        <p>Simple, affordable and eco-friendly way to reuse products.</p>
+
+        <div class="why-container">
+
+            <div class="why-card">
+                <i class="fa-solid fa-money-bill-wave"></i>
+                <h3>Affordable Prices</h3>
+                <p>Get useful products at budget-friendly prices.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fa-solid fa-recycle"></i>
+                <h3>Eco-Friendly</h3>
+                <p>Reuse products and help reduce unnecessary waste.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fa-solid fa-handshake"></i>
+                <h3>Easy Buying & Selling</h3>
+                <p>Connect with buyers and sellers easily.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Simple & Convenient</h3>
+                <p>A simple platform to find and list used products.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+
+        <h2>How ReuseHub Works</h2>
+        <p>Buying and selling used products is simple.</p>
+
+        <div class="steps">
+
+            <div class="step">
+                <span>1</span>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <h3>Browse</h3>
+                <p>Find the product you need.</p>
+            </div>
+
+            <div class="step">
+                <span>2</span>
+                <i class="fa-solid fa-eye"></i>
+                <h3>Choose</h3>
+                <p>Check product details and price.</p>
+            </div>
+
+            <div class="step">
+                <span>3</span>
+                <i class="fa-solid fa-phone"></i>
+                <h3>Contact</h3>
+                <p>Contact the seller directly.</p>
+            </div>
+
+            <div class="step">
+                <span>4</span>
+                <i class="fa-solid fa-recycle"></i>
+                <h3>Reuse</h3>
+                <p>Give the product a new life.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+   <footer>
+    <p>© 2026 ReuseHub. All Rights Reserved.</p>
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
